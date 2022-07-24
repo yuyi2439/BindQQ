@@ -1,0 +1,2 @@
+# BindQQ
+A MCDR plugin
