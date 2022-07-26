@@ -13,7 +13,6 @@ gl_qqName = {}
 gl_qqNum = {}
 
 def searchDB(qqNum: str, server):
-    server.logger.info(gl_config['database'])
     count = 0
     for key in gl_config['database']:
         if gl_config['database'][key] == qqNum:
