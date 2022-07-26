@@ -1,8 +1,11 @@
 {
     "id": "bindqq",
-    "version": "0.0.1",
+    "version": "0.2.1",
     "name": "BindQQ",
     "description": "绑定QQ",
     "author": "yuyi2439",
-    "link": "https://github.com/yuyi2439/BindQQ"
+    "link": "https://github.com/yuyi2439/BindQQ",
+    "dependencies": {
+        "mcdreforged": ">=2.0.0"
+    }
 }
