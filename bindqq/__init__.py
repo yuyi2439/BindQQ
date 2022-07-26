@@ -52,7 +52,7 @@ def bind(server, info):
                     gl_qqNum[info.player] = qqNum
                     gl_qqName[info.player] = bindqq.getQQName.GetQQName(qqNum)
                     gl_ranNum[info.player] = str(random.randint(1000,9999))
-                    server.reply(info,'你的QQ名称为' + gl_qqName[info.player] + '，请在昵称后面加上' + gl_ranNum[info.player] + '，然后输入!!bindqq b ok')
+                    server.reply(info,'你的QQ名称为' + gl_qqName[info.player] + '，请在昵称后面加上' + gl_ranNum[info.player] + '，然后输入!!bindqq b ok(绑定成功后可以改回原来的昵称)')
                 else :
                 #=QQ绑定数量上限
                     server.reply(info,'此QQ账号已经被绑定到' + str(gl_config['每个QQ账号绑定的玩家最大数量']) + '个玩家了，请先解绑后再绑定')
