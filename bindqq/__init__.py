@@ -1,5 +1,9 @@
 import sys
 import random
+
+from mcdreforged.info_reactor.info import Info
+from mcdreforged.plugin.server_interface import PluginServerInterface
+
 sys.path.append('./')
 import bindqq.getQQName
 
@@ -65,20 +69,20 @@ def bind(server, info):
 def unbind(server, info):
     server.reply(info,'此功能暂未实现')
 
-def on_load(server, prev):
+def on_load(server: PluginServerInterface, prev_module):
     #加载配置文件
     global gl_config
     gl_config = server.load_config_simple(de_config_file, de_default_config)
     #注册帮助信息
     server.register_help_message('!!bindqq','绑定QQ')
 
-def on_user_info(server, info):
+def on_user_info(server: PluginServerInterface, info: Info):
     if info.content[0:8] == '!!bindqq' :
         if info.content[9:] == '' :
         #帮助信息
-            server.reply(info, '§6!!bindqq §7显示帮助信息\n' +
-            '§6!!bindqq b §7绑定QQ\n' +
-            '§6!!bindqq ub §7解除绑定')
+            server.reply(info, f'§6!!bindqq §7显示帮助信息\n'
+                               f'§6!!bindqq b §7绑定QQ\n'
+                               f'§6!!bindqq ub §7解除绑定')
 
         elif info.content[9:10] == 'b':
         #绑定
